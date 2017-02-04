@@ -1,0 +1,24 @@
+.vid
+{
+	position: relative;
+	margin: 0 auto; 
+	width: 320px;
+}
+
+.contact
+{
+	text-align: left;
+	font-size: 1.2em;
+}
+.contact2
+{
+	text-align: center;
+	font-size: 1.2em;
+}
+.aaa
+{
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
