@@ -9,14 +9,10 @@ h1
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	font-size: 2em;
+	font-size: 3em;
 	color: #3a506b;
 }
-h1 + h2
-{
-	font-size: 0.9em;
-	
-}
+
 p 
 {
 	font-size: 0.8em;
@@ -27,13 +23,14 @@ h2
 {
 	text-align: center;
 	color: #5bc0be;
+	font-size: 1.8em;
 }
 
 h3
 {
 	color: #aaaaaa;
 	text-align: center;
-	font-size: 0.9em;
+	font-size: 1.1em;
 }
 ul
 {
@@ -73,7 +70,7 @@ ul
     background-color: #0b132b;
 	color: #fafafa;
 	padding: 5px;
-	width: 60%;
+	width: 70%;
 	margin: 0 auto;
 	border-radius: 15px;
 	position: relative;
