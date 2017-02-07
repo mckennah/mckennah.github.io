@@ -5,9 +5,13 @@ body
 
 h1
 {
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Sacramento', cursive;
 }
 
+h2.subtitle
+{
+	font-family: 'Quicksand' , sans-serif;
+}
 p
 {
 	font-family: 'Ubuntu Condensed', sans-serif;
