@@ -109,7 +109,10 @@ h2 > a:hover
 	font-size: 1.1em;
 }
 
-
+.spacing
+{
+	padding: 10px;
+}
 
 
 
