@@ -133,8 +133,9 @@ size, greyhounds can slip out of traditional collars.</p>
 		(gold.checked) ? (orderTotal += 7) : (orderTotal += 0);
 	var tempeTaxRate = 0.081;
 	orderTotal *= 100;
-	var orderTotal = (orderTotal + (orderTotal * tempeTaxRate)) / 100;
 	var orderTotalRounded = Math.round(orderTotal);
+	var orderTotal = (orderTotalRounded + (orderTotalRounded * tempeTaxRate)) / 100;
+	
 	
 	alert("Your order total is $" + orderTotalRounded);
 	}
