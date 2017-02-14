@@ -5,7 +5,7 @@
 	McKennah Schroeder
 	File name: index.html
 	Created: Feb 4, 2017
-	Last Updated: Feb 12, 2017
+	Last Updated: Feb 13, 2017
 -->
 <title>Paramount Greyhound Apparel</title>
 <meta charset="utf-8" />
@@ -41,13 +41,13 @@
 		<a href="./">Frequently Asked Questions</a>
 	</div>
 </li>	
-<li class="menu"><a href="./page2.html">Coats</a></li>
+<li class="menu"><a href="./">Coats</a></li>
 <li class="menu"><a href="./page3.html">Shirts</a></li>
 <li class="menu"><a href="./page4.html">Dresses</a></li>
 <li class="menu dropdown"><a href="#" class="dropbtn">Collars</a>
 	<div class="dropdown-content">
 		<a href="./">Standard Collars</a>
-		<a href="./">Martingale Collars</a>
+		<a href="./page2">Martingale Collars</a>
 	</div>
 </li>
 <li class="menu"><a href="./">Snoods</a></li>
@@ -79,71 +79,10 @@
 
 
 
-<div class="section">
-<div class="spacing">
-<h2>Price Estimate: Martingale Collars</h2>
-<p>All of our collars are made with high-quality, durable fabric. 
-We use polpro webbing, which is hypoallergenic and it won't stretch over time
-like nylon collars.
-<br>
-The martingale collar is recommended for greyhounds; the extra loop allows
-the collar to tighten when pulled. Because of their large neck and small head
-size, greyhounds can slip out of traditional collars.</p>
-<br>
-<p>This form will calculate the cost of the collar with 8.1% sales tax included</p>
-    <form>
-         <input type="checkbox" id="size1" value="18" />
-         <label for="size1">S 12-15" ($18.00)</label><br>
-		 
-         <input type="checkbox" id="size2" value="24" />
-         <label for="size2">M 14-18" ($24.00)</label><br>
-		 
-         <input type="checkbox" id="size3" value="30" />
-         <label for="size3">L ($30.00)</label><br>
-	
-		 <input type="checkbox" id="leash" value="22" />
-         <label for="leash">Matching Leash, 8' ($22.00)</label><br>
-		 
-         <input type="checkbox" id="gold" value="7" />
-         <label for="gold">Gold hardware upgrade ($7.00)</label><br><br>
-		 
-		 
-         <input type="submit" id="submit" value="Submit" />
-    </form>
 
-
-
-
-</div>
-</div>
 </main>
 </div>
 </div>
-<script>
-	function calcTotal() {
-	var orderTotal = 0;
-	var size1 = document.getElementById("size1");
-	var size2 = document.getElementById("size2");
-	var size3 = document.getElementById("size3");
-	var leash = document.getElementById("leash");
-	var gold = document.getElementById("gold");
-		(size1.checked) ? (orderTotal += 18) : (orderTotal += 0);
-		(size2.checked) ? (orderTotal += 24) : (orderTotal += 0);
-		(size3.checked) ? (orderTotal += 30) : (orderTotal += 0);
-		(leash.checked) ? (orderTotal += 22) : (orderTotal += 0);
-		(gold.checked) ? (orderTotal += 7) : (orderTotal += 0);
-	var tempeTaxRate = 0.081;
 
-	var orderTotal = orderTotal + (orderTotal * tempeTaxRate);
-	
-	var orderTotalRounded = (Math.round(orderTotal*Math.pow(10,2))/Math.pow(10,2)).toFixed(2);
-	
-	alert("Your order total is $" + orderTotalRounded);
-	}
-
-document.getElementById("submit").
-	addEventListener("click", calcTotal, false);
-
-</script> 
 </body>
 </html>
