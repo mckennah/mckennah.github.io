@@ -16,6 +16,7 @@
 //need to add in the tax to the total
 	var orderTotal = orderTotal + (orderTotal * tempeTaxRate); 
 //this is so I don't get the weird decimal issues. The example in the book would not show a 0 in the cents ex. 22.10 was 22.1
+//to prove there was an issue with this try doing a large collar with gold hardware. I think that's the only instance
 	var orderTotalRounded = (Math.round(orderTotal*Math.pow(10,2))/Math.pow(10,2)).toFixed(2);
 	
 	alert("Your custom order total is $" + orderTotalRounded + "!");//order total is rounded because only two decimals allowed
