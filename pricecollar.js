@@ -6,6 +6,7 @@
 	var size3 = document.getElementById("size3"); //size L
 	var leash = document.getElementById("leash"); 
 	var gold = document.getElementById("gold");
+	//Cost of the items is put in below
 		(size1.checked) ? (orderTotal += 18) : (orderTotal += 0);
 		(size2.checked) ? (orderTotal += 24) : (orderTotal += 0);
 		(size3.checked) ? (orderTotal += 30) : (orderTotal += 0);
