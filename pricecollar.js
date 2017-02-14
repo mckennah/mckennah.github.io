@@ -21,6 +21,10 @@
 	alert("Your custom order total is $" + orderTotalRounded + " Thanks!"); //always nice to thank the customers
 	}
 
-document.getElementById("submit").
-	addEventListener("click", calcTotal, false);
+//Fixes error "Uncaught TypeError: Cannot read property 'addEventListener' of null"
+var el = document.getElementById("submit");
+if(el){
+	el.addEventListener("click", calcTotal, false);
+}
+	
 
