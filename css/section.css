@@ -1,5 +1,6 @@
-form
+.snoodform
 {
-	display: inline-block;
-	text-align: center;
+	position: relative;
+	padding: 10px;
+	width: 60%;
 }
