@@ -72,7 +72,15 @@
 
 <div class="section">
 <h2>Snoods</h2>
-
+<p>Snoods are dog scarves that fit snugly around their neck, ears, and face. 
+It is important to get the correct size snood so that it is not too loose or too tight. </p>
+<form action="#">
+Neck's circumference in inches at widest point:<br>
+<input type="number" name="snoodMeasurement" id="snoodMeasurement" min="0" max="99">
+<br>
+<button type="button" id="button">Enter</button>
+</form>
+<p id="msmtCalc"></p>
 </div>
 
 
@@ -82,6 +90,35 @@
 </main>
 </div>
 </div>
-
+<script>
+// global variables
+var i = [1];
+var msmt = [""];
+// function to tell user what size snood for their hound
+function measureSnood() {
+	if (i <=10) {
+	document.getElementById("msmtCalc").innerHTML = "We recommend size 'Small'";
+	}
+	else if (i<=16) {
+	document.getElementById("msmtCalc").innerHTML = "We recommend size 'Medium'";
+	}
+	else if (i<=24) {
+	document.getElementById("msmtCalc").innerHTML = "We recommend size 'Large'";
+	}
+	else if (i<=33) {
+	document.getElementById("msmtCalc").innerHTML = "We recommend size 'Extra-Large'";
+	}
+	else if (i>33) {
+	document.getElementById("msmt.Calc").innerHTML = "We recommend that your dog should lose some weight";
+	}
+}
+var btn = document.getElementById("button");
+	if (btn.addEventListener) {
+	btn.addEventListener("click", measureSnood, false);
+	}
+	else if (btn.attachEvent) {
+	btn.attachEvent("onclick", measureSnood)
+	}
+</script>
 </body>
 </html>

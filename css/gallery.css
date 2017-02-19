@@ -88,3 +88,24 @@ transform:translatey(0);
 -webkit-transition-delay:.2s;
 transition-delay:.2s;
 }
+
+.swatch1
+{
+	float: left;
+	border: 2px #000;
+}
+.swatch2
+{
+	float: left;
+	border: 2px #000;
+}
+.swatch3
+{
+	float: left;
+	border: 2px #000;
+}
+.swatch4
+{
+	float: left;
+	border: 2px #000;
+}
