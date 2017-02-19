@@ -80,8 +80,9 @@ It is important to get the correct size snood so that it is not too loose or too
 Neck's circumference at widest point:
 <input type="number" placeholder="inches" name="snoodMeasurement" id="snoodMeasurement" min="0" max="99">
 <button type="button" id="button">Enter</button>
-</form>
 <p id="msmtCalc"></p>
+</form>
+
 <br><br><br>
 </div>
 </div>
@@ -99,7 +100,9 @@ var i = [1];
 // function to tell user what size snood for their hound
 function measureSnood() {
 var i = document.getElementById("snoodMeasurement").value;
-	if (i <=10) {
+	if (i <=5) {
+	document.getElementById("msmtCalc").innerHTML = "We recommend size 'Extra-Small'"
+	} else if (i <=10) {
 	document.getElementById("msmtCalc").innerHTML = "We recommend size 'Small'";
 	} else if (i<=16) {
 	document.getElementById("msmtCalc").innerHTML = "We recommend size 'Medium'";
@@ -112,10 +115,10 @@ var i = document.getElementById("snoodMeasurement").value;
 	} 
 }
 var btn = document.getElementById("button");
-	if (btn.addEventListener) {
+	if (btn.addEventListener) { //to make it work when button is clicked
 	btn.addEventListener("click", measureSnood, false);
 	}
-	else if (btn.attachEvent) {
+	else if (btn.attachEvent) { //for those weirdos who use old versions of IE
 	btn.attachEvent("onclick", measureSnood)
 	}
 </script>
