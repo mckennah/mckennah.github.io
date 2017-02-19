@@ -5,3 +5,10 @@
 	width: 60%;
 	text-align: center;
 }
+img
+{
+	display: block;
+	margin: auto;
+	border-width: 2px;
+	border-color: #000;
+}
