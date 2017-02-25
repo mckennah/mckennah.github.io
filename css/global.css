@@ -48,6 +48,7 @@ ul
 	position: relative;
 	margin: 20px auto;
 	padding: 5px;
+	overflow: auto;
 }
 
 #header1
@@ -74,6 +75,7 @@ ul
 	margin: 0 auto;
 	border-radius: 15px;
 	position: relative;
+	overflow: auto;
 
 }
 
