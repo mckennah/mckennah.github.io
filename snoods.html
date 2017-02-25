@@ -69,25 +69,47 @@
 
 
 <div id="container">
-<main>
+	<main>
+		<div class="section">
+			<h2>Snoods</h2>
+				<img src="images/snood.jpg" alt="snood on greyhound" width="300">
+				<p>Snoods are dog scarves that fit snugly around their neck, ears, and face. 
+					It is important to get the correct size snood so that it is not too loose or too tight. </p>
+						<div class="snoodForm">
+							<form>
+							Is your dog a greyhound?
+								<input type="radio" name="greyhoundYN" id="Greyhound" value="Greyhound">
+								<input type="radio" name="greyhoundYN" id="Non-Greyhound" value="Non-Greyhound">
+							</form>
+							<form>
+							What type of head does your dog have? Please click <a href="http://www.caninest.com/dog-head-types/">here</a> if you do not know.
+								<select name="Head Shape">
+									<option value="blocky" name="blocky" id="blocky">Blocky Head</option>
+									<option value="domed" name="domed" id="domed">Domed Head</option>
+									<option value="down" name="down" id="down">Down Head</option>
+									<option value="apple" name="apple" id="apple">Apple Head</option>
+									<option value="dish" name="dish" id="dish">Dish Head</option>
+									<option value="broken" name="broken" id="broken">Broken Head</option>
+							</form>
+							<form>
+							What type of head does your dog have? Please click <a href="http://www.caninest.com/dog-head-types/">here</a> if you do not know.
+								<input type="select"
+							<form>
+								Neck's circumference at widest point:
+								<input type="number" placeholder="inches" name="snoodMeasurement" id="snoodMeasurement" min="0" max="99">
+								<button type="button" id="button">Enter</button>
+							</form>
+						</div>
 
-<div class="section">
-<h2>Snoods</h2>
-<img src="images/snood.jpg" alt="snood on greyhound" width="300">
-<p>Snoods are dog scarves that fit snugly around their neck, ears, and face. 
-It is important to get the correct size snood so that it is not too loose or too tight. </p>
-<div class="snoodForm">
-<form>
-Neck's circumference at widest point:
-<input type="number" placeholder="inches" name="snoodMeasurement" id="snoodMeasurement" min="0" max="99">
-<button type="button" id="button">Enter</button>
-</form>
-</div>
-<div class="snoodChoice">
-<h2>We recommend...</h2>
-<p id="msmtCalc"></p>
-</div>
-</div>
+						
+						
+						
+						
+						<div class="snoodChoice">
+							<h3>We recommend...</h3>
+								<p id="msmtCalc"></p>
+						</div>
+		</div>
 
 
 
@@ -96,33 +118,6 @@ Neck's circumference at widest point:
 </main>
 </div>
 </div>
-<script>
-// global variables
-var i = [1];
-// function to tell user what size snood for their hound
-function measureSnood() {
-var i = document.getElementById("snoodMeasurement").value;
-	if (i <=5) {
-	document.getElementById("msmtCalc").innerHTML = "We recommend size 'Extra-Small'"
-	} else if (i <=10) {
-	document.getElementById("msmtCalc").innerHTML = "We recommend size 'Small'";
-	} else if (i<=16) {
-	document.getElementById("msmtCalc").innerHTML = "We recommend size 'Medium'";
-	} else if (i<=24) {
-	document.getElementById("msmtCalc").innerHTML = "We recommend size 'Large'";
-	} else if (i<=33) {
-	document.getElementById("msmtCalc").innerHTML = "We recommend size 'Extra-Large'";
-	} else {
-	document.getElementById("msmtCalc").innerHTML = "We recommend your dog lose weight";
-	} 
-}
-var btn = document.getElementById("button");
-	if (btn.addEventListener) { //to make it work when button is clicked
-	btn.addEventListener("click", measureSnood, false);
-	}
-	else if (btn.attachEvent) { //for those weirdos who use old versions of IE
-	btn.attachEvent("onclick", measureSnood)
-	}
-</script>
+<script type="text/javascript" src="snood.js"></script>
 </body>
 </html>
