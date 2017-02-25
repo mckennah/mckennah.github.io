@@ -17,17 +17,17 @@ var i = [1];
 function measureSnood() { // function to tell user what size snood for their hound
 var i = document.getElementById("snoodMeasurement").value;
 	if (i <=5) {
-	document.getElementById("msmtCalc").innerHTML = "We recommend size 'Extra-Small'"
+	document.getElementById("msmtCalc").innerHTML = "Extra-Small"
 	} else if (i <=10) {
-	document.getElementById("msmtCalc").innerHTML = "We recommend size 'Small'";
+	document.getElementById("msmtCalc").innerHTML = "Small";
 	} else if (i<=16) {
-	document.getElementById("msmtCalc").innerHTML = "We recommend size 'Medium'";
+	document.getElementById("msmtCalc").innerHTML = "Medium";
 	} else if (i<=24) {
-	document.getElementById("msmtCalc").innerHTML = "We recommend size 'Large'";
+	document.getElementById("msmtCalc").innerHTML = "Large";
 	} else if (i<=33) {
-	document.getElementById("msmtCalc").innerHTML = "We recommend size 'Extra-Large'";
+	document.getElementById("msmtCalc").innerHTML = "Extra-Large";
 	} else {
-	document.getElementById("msmtCalc").innerHTML = "We recommend your dog lose weight";
+	document.getElementById("msmtCalc").innerHTML = "that your dog lose weight";
 	} 
 }
 var btn = document.getElementById("button");
