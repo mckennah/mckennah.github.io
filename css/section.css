@@ -20,3 +20,7 @@ img
 	border-width: 2px;
 	border-color: #000;
 }
+.snoodForm p
+{
+	text-align: left;
+}
