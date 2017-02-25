@@ -1,9 +1,16 @@
-.snoodform
+.snoodForm
 {
-	position: relative;
-	padding: 10px;
+	padding: 5px;
 	width: 60%;
+	text-align: left;
+	float: right;
+}
+.snoodChoice
+{
+	padding: 5px;
+	width: 30%;
 	text-align: center;
+	float: left;
 }
 img
 {
