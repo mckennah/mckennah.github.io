@@ -76,6 +76,8 @@
 				<p>Snoods are dog scarves that fit snugly around their neck, ears, and face. 
 					It is important to get the correct size snood so that it is not too loose or too tight. </p>
 					<br><br>
+					
+					
 						<div class="snoodForm">
 							
 							<form>
@@ -85,43 +87,31 @@
 								<br>
 								</fieldset>
 								<fieldset>
-									<legend><b>Is your dog a greyhound?</b></legend>
-									<br>
-										&ensp; <input type="radio" name="greyYN" id="Greyhound" value="Greyhound">Greyhound 
-										&ensp; <input type="radio" name="greyYN" id="Non-Greyhound" value="Non-Greyhound">Non-Greyhound
-								<br><br>
-								</fieldset>
-								<!--
-								commenting out for now, need more time to work on this.
-								<fieldset>
-									<legend><b>What type of head does your dog have?</b></legend> 
-									&ensp;
-										<select id ="headShapeSelect" name="Head Shape">
-											<option value="headShape" id="headShape" disabled selected>Head Shape</option>
-											<option value="blocky" id="blocky">Blocky Head</option>
-											<option value="domed" id="domed">Domed Head</option>
-											<option value="down" id="down">Down Face</option>
-											<option value="apple" id="apple">Apple Head</option>
-											<option value="dish" id="dish">Dish Face</option>
-											<option value="broken" id="broken">Broken-Up Face</option>
-										</select>
-									<p>Please click <a href="http://www.caninest.com/dog-head-types/">here</a> 
-										if you do not know.</p>
-								<br>
-								</fieldset>
-								-->
-								<fieldset>
 									<legend><b>What is your winter climate?</b></legend> 
 									<br>
-										&ensp; <input type="radio" name="climate" id="mild" value="mild">Mild<br>
-										&ensp; <input type="radio" name="climate" id="dry" value="dry">Dry<br>
-										&ensp; <input type="radio" name="climate" id="wet" value="wet">Wet and Rainy<br>
-										&ensp; <input type="radio" name="climate" id="cold" value="cold">Cold and Snowy<br>
-										&ensp; <input type="radio" name="climate" id="harsh" value="harsh">Harsh and Inhospitable
-								<br><br>
+										&ensp; <input type="radio" name="climate" id="mild" value="mild">
+											<label for="mild">Mild</label><br>
+										&ensp; <input type="radio" name="climate" id="dry" value="dry">
+											<label for="dry">Dry</label><br>
+										&ensp; <input type="radio" name="climate" id="wet" value="wet">
+											<label for="wet">Wet and Rainy</label><br>
+										&ensp; <input type="radio" name="climate" id="cold" value="cold">
+											<label for="cold">Cold and Snowy</label><br>
+										&ensp; <input type="radio" name="climate" id="harsh" value="harsh">
+											<label for="harsh">Harsh and Inhospitable</label>
+								<br>
+								</fieldset>
+																<fieldset>
+									<legend><b>Is your dog a greyhound?</b></legend>
+									<br>
+										&ensp; <input type="radio" name="greyYN" id="greyhound" value="greyhound">
+											<label for="greyhound">Greyhound</label>
+										&ensp; <input type="radio" name="greyYN" id="non-greyhound" value="non-greyhound">
+											<label for="non-greyhound">Non-Greyhound</label>
+								<br>
 								</fieldset>
 							</form>
-							<button type="button" id="button" onClick="testFormCompleteness()">Enter</button>
+							
 							<br>
 						</div>
 
@@ -131,8 +121,9 @@
 						
 						<div class="snoodChoice">
 							<h3>We recommend...</h3>
-								<p id="recommendSize"></p>
-								<p id="explanation"></p>
+								<p id="recommendSize"> </p>
+								<p id="message"> </p>
+								<p id="message2"> </p>
 						</div>
 		</div>
 
