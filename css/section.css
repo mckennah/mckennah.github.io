@@ -4,7 +4,8 @@
 	width: 70%;
 	text-align: left;
 	float: right;
-	border-style: inset;
+	border-style: solid;
+	border-radius: 15px;
 }
 .snoodChoice
 {
@@ -24,4 +25,8 @@ img
 .snoodForm p
 {
 	text-align: left;
+}
+fieldset
+{
+	border: 0;
 }
