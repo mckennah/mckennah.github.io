@@ -162,3 +162,7 @@ if (window.addEventListener) {
 } else if (window.attachEvent) {
    window.attachEvent("onload", createEventListeners);
 }
+
+/*I used the try, catch, and throw method in this project. 
+It will tell the user to enter a value within the defined limits listed, 
+and clear the previous erroneous value. */
