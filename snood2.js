@@ -1,16 +1,16 @@
 // global variables
 var inchesComplete = true;
 var greyYNComplete = true;
-var climateComplete = true;
+//var climateComplete = true;
 var i = [1];
 
 var recommendSizeElement = document.getElementById("recommendSize"); //size recommendation
-var messageElement = document.getElementById("message"); //message of size & fabric recomendation
+var messageElement = document.getElementById("message"); //message of size recomendation
 var message2Element = document.getElementById("message2"); //message of head hole recomendation
 
 var inchesFieldset = document.getElementsByTagName("fieldset")[0];
 var greyYNFieldset = document.getElementsByTagName("fieldset")[1];
-var climateFieldset = document.getElementsByTagName("fieldset")[2];
+//var climateFieldset = document.getElementsByTagName("fieldset")[2];
 
 var inchesBox = document.forms[0].inches; //inches input box
 
@@ -39,6 +39,13 @@ function verifyInches() {
 				}
 			}
 
+/*
+// verify that a climate is selected
+function verifyClimate() {
+   testFormCompleteness();
+}
+*/
+
 // verify that user has selected that they're shopping for a greyhound or not
 function verifyGreyYN() {
    testFormCompleteness();
@@ -47,58 +54,70 @@ function verifyGreyYN() {
 
 
 
-// verify that a climate is selected
-function verifyClimate() {
-   testFormCompleteness();
-}
 
 //check if all form sections are completed
 function testFormCompleteness() {
-			if (inchesComplete && greyYNComplete && climateComplete) {
+			if (inchesComplete && greyYNComplete) {
 				createRecommendation();
 			}
 }
 
 // generate snood recommendation based on user input
-function createRecommendation() {
-				if (inchesBox.value <=9) {
-						recommendSizeElement.innerHTML = "Extra-Small";
-						messageElement.innerHTML = "A snood in size extra-small";
-			} else if (inchesBox.value <=12) {
-						recommendSizeElement.innerHTML = "Small";
-						messageElement.innerHTML = "A snood in size small";
-			} else if (inchesBox.value <=18) {
-						recommendSizeElement.innerHTML = "Medium";
-						messageElement.innerHTML = "A snood in size medium";
-			} else if (inchesBox.value <=24) {
-						recommendSizeElement.innerHTML = "Large";
-						messageElement.innerHTML = "A snood in size large";
-			} else if (inchesBox.value <=33) {
-						recommendSizeElement.innerHTML = "Extra-Large";
-						messageElement.innerHTML = "A snood in size extra-large";
-			} else {
-						recommendSizeElement.innerHTML = "None Available";
-						messageElement.innerHTML = "We currently don't carry snoods large enough for your porky pet. We would recommend a weight-managment diet and rigorous exercise routine.";
-			} 
 
-	if (document.getElementById("mild").checked) { // add fabric type based on climate
-	  messageElement.innerHTML += ", in a loose-knit fabric, perfect for general use.";
-	} else if (document.getElementById("dry").checked) {
-      messageElement.innerHTML += ", in one of our looser knits, perfect for regions with dry winters.";
-	} else if (document.getElementById("wet").checked) {
-      messageElement.innerHTML += ", in a waterproof fabric, perfect for regions with wet winters.";
-	} else if (document.getElementById("cold").checked) {
-      messageElement.innerHTML += ", in a heavy fabric or our tighter knits, perfect for regions with cold winters.";
-	} else if (document.getElementById("harsh").checked) {
-      messageElement.innerHTML += ". We would recommend a double layer with a tight-knit snood underneath a waterproof snood to keep your pooch warm and dry.";
-   }
-   
+function createRecommendation() {
+//add size based on input
+		if (inchesBox.value <=8) {
+						recommendSizeElement.innerHTML = "Extra-Small";
+						messageElement.innerHTML = "A snood in size extra-small.";
+			} else if (inchesBox.value <=14) {
+						recommendSizeElement.innerHTML = "Small";
+						messageElement.innerHTML = "A snood in size small.";
+			} else if (inchesBox.value <=22) {
+						recommendSizeElement.innerHTML = "Medium";
+						messageElement.innerHTML = "A snood in size medium.";
+			} else if (inchesBox.value <=30) {
+						recommendSizeElement.innerHTML = "Large";
+						messageElement.innerHTML = "A snood in size large.";
+			} else if (inchesBox.value <=40) {
+						recommendSizeElement.innerHTML = "Extra-Large";
+						messageElement.innerHTML = "A snood in size extra-large.";
+			} 
+/*to be fixed
+// add fabric type based on climate
+		if (document.getElementById("mild").checked) { 
+						messageElement.innerHTML += ", in a loose-knit fabric, perfect for general use.";
+			} else if (document.getElementById("wet").checked) {
+						messageElement.innerHTML += ", in a waterproof fabric, perfect for regions with wet winters.";
+			} else if (document.getElementById("cold").checked) {
+						messageElement.innerHTML += ". We would recommend a double layer with a tight-knit snood underneath a waterproof snood to keep your pooch warm and dry.";
+			} else {
+				messageElement.innerHTML += ".";
+   }	
+*/		
+		
+//add recomendation based on breed
    	if (document.getElementById("greyhound").checked) {
-		message2Element.innerHTML = "Our standard snood is built for Greyhounds.";
+			message2Element.innerHTML = "Our standard snood is built for Greyhounds, Salukis, Whippets, and Italian Greyhounds.";
 	} else if (document.getElementById("non-greyhound").checked) {
-		message2Element.innerHTML = "Our 'Jumbo Noggin' snood option will fit your non-greyhound pooch.";
+				message2Element.innerHTML = "Our 'Jumbo Noggin' snood option will fit your non-greyhound pooch.";
 	}
 }
+
+
+
+
+/*might do a button later
+
+var btn = document.getElementById("button");
+	if (btn.addEventListener) { //to make it work when button is clicked
+	btn.addEventListener("click", testFormCompleteness, false);
+	}
+	else if (btn.attachEvent) { //for users of old versions of IE
+	btn.attachEvent("onclick", testFormCompleteness)
+	}
+
+*/
+
 
 //create event listeners for all input elements 
 function createEventListeners() {
@@ -119,6 +138,8 @@ function createEventListeners() {
         greyYNBox.attachEvent("onchange", verifyGreyYN);
       }
    }
+}
+  /*
    var climateBox;
    for (var i = 0; i < 5; i++) {
       climateBox = climateFieldset.getElementsByTagName("input")[i];
@@ -130,11 +151,10 @@ function createEventListeners() {
       }
    }
 }
+*/
 
 
 
-
-	
 	
 // create event listeners when page finishes loading 
 if (window.addEventListener) {
