@@ -121,11 +121,27 @@ h2 > a:hover
 .subtitle
 {
 	font-size: 1.1em;
+	color: #235b5a;
 }
 .WSafety
 {
 	font-size: 1.2em;
 	color: #aaaaaa;
+}
+a.WS:link
+{
+	color: #fafafa;
+	text-decoration: none;
+}
+a.WS:visited
+{
+	color: #5bc0be;
+	text-decoration: none;
+}
+a.WS:hover
+{
+	color: #5bc0be;
+	text-decoration: underline;
 }
 .spacing
 {
@@ -141,7 +157,10 @@ h2 > a:hover
 {
 	list-style-type: square;
 }
-
+.ulSquare > li
+{
+	margin-bottom: 15px;
+}
 .clearfix 
 {
 	zoom: 1;
