@@ -10,17 +10,18 @@ Dark Blue #0b132b
 */
 
 
-
-/*Main stuff*/
 body 
 {
     background-color: #fafafa;
 	margin: 0;
 }
+
+
 p 
 {
 	font-size: 0.8em;
 	text-align: center;
+
 }
 h2
 {
@@ -28,6 +29,7 @@ h2
 	color: #5bc0be;
 	font-size: 1.8em;
 }
+
 h3
 {
 	color: #aaaaaa;
@@ -38,43 +40,26 @@ ul
 {
 	list-style-type: none;
 }
-h1 > a:link
-{
-	color: #0b132b;
-	text-decoration: none;
-}
-h1 > a:visited
-{
-	color: #0b132b;
-	text-decoration: none;
-}
-h2 > a:link
-{
-	text-decoration: none;
-}
-h2 > a:hover
-{
-	color: #3a506b;
-}
-a.WS:link
-{
-	color: #fafafa;
-	text-decoration: none;
-}
-a.WS:visited
-{
-	color: #5bc0be;
-	text-decoration: none;
-}
-a.WS:hover
-{
-	color: #5bc0be;
-	text-decoration: underline;
-}
 
 
+.section
+{
+	border-style: dotted;
+	border-color: #3a506b;
+	border-width: 2px;
+	border-radius: 15px;
+	width: 95%;
+	position: relative;
+	margin: 20px auto;
+	padding: 10px;
+	overflow: auto;
+}
 
-/*IDs*/
+#header1
+{
+	background-color: #fafafa;
+	padding: 0px;
+}
 #outer
 {
 	background-color: #fafafa
@@ -90,6 +75,7 @@ a.WS:hover
 	border-radius: 15px;
 	position: relative;
 	overflow: auto;
+
 }
 #safety
 {
@@ -104,9 +90,22 @@ a.WS:hover
 	overflow: auto;
 }
 
+h1 > a:link
+{
+	color: #0b132b;
+	text-decoration: none;
+}
+h1 > a:visited
+{
+	color: #0b132b;
+	text-decoration: none;
+}
 
+h2 > a:link
+{
 
-/*Classes*/
+	text-decoration: none;
+}
 .about-section-left
 {
 	float: left;
@@ -119,6 +118,7 @@ a.WS:hover
 	overflow: hidden;
 	border-style: dashed;
 	border-color: #3a506b;
+	
 }
 .about-section-right
 {
@@ -133,50 +133,14 @@ a.WS:hover
 	border-style: dashed;
 	border-color: #3a506b;
 	border-width: 3px;
+	
+	
 }
-.section
+
+
+h2 > a:hover
 {
-	border-style: dotted;
-	border-color: #3a506b;
-	border-width: 2px;
-	border-radius: 15px;
-	width: 95%;
-	position: relative;
-	margin: 20px auto;
-	padding: 10px;
-	overflow: auto;
-}
-.section-2
-{
-	background-color: #0b132b;
-	color: #fafafa;
-	padding: 5px;
-	width: 80%;
-	height: 200px;
-	margin: 0 auto;
-	border-radius: 15px;
-	position: relative;
-	overflow: auto;
-	border-style: dashed;
-	border-color: #3a506b;
-	border-width: 3px;
-}
-.spacing
-{
-	padding: 10px;
-}
-.spacing-2
-{
-	width: 80%;
-	padding: 5px;
-	position: relative;
-	margin: 0 auto;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-.spacing-3
-{
-	margin-bottom: 150px;
+	color: #3a506b;
 }
 .big-link:hover
 {
@@ -195,6 +159,42 @@ a.WS:hover
 {
 	font-size: 1.2em;
 	color: #aaaaaa;
+}
+a.WS:link
+{
+	color: #fafafa;
+	text-decoration: none;
+}
+a.WS:visited
+{
+	color: #5bc0be;
+	text-decoration: none;
+}
+a.WS:hover
+{
+	color: #5bc0be;
+	text-decoration: underline;
+}
+.spacing
+{
+	padding: 10px;
+}
+.spacing-2
+{
+	width: 80%;
+	padding: 5px;
+	position: relative;
+	margin: 0 auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.spacing-3
+{
+	width: 100%;
+	height: 220px;
+	padding: 40px;
+	position: relative;
+	margin: 0 auto;
 }
 .left
 {
