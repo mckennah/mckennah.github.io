@@ -81,7 +81,6 @@ a.WS:hover
 }
 #container
 {
-	
     background-color: #0b132b;
 	color: #fafafa;
 	padding: 5px;
@@ -173,6 +172,10 @@ a.WS:hover
 	margin: 0 auto;
 	padding-top: 10px;
 	padding-bottom: 10px;
+}
+.nostyle
+{
+	border: 0;
 }
 .spacing-3
 {

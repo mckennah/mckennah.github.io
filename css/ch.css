@@ -1,0 +1,24 @@
+#container-ch
+{
+	background-color: #0b132b;
+	color: #fafafa;
+	padding: 5px;
+	width: 70%;
+	float: left;
+	border-radius: 15px;
+	overflow: auto;
+}
+
+aside
+{
+	float: right;
+	width: 28%;
+	padding: 5px;
+	border: dotted;
+	border-color: #5bc0be
+}
+
+.button-ch
+{
+
+}
