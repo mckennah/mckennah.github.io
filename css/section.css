@@ -34,3 +34,211 @@ fieldset
 {
 	font-size: 1.4em;
 }
+
+/*Chapter 7 CSS */
+#shippingTicket {
+   float: right;
+   width: 380px;
+   background: #f9bd6d;
+   padding: 20px;
+   position: relative;
+   margin: 0 5px 5px 0;
+}
+
+#shippingTicket, #dateSection, #countupSection{
+   display: none;
+}
+
+#shippingTicket li, #shippingTicket p {
+   text-indent: 1em;
+   margin-top: 5px;
+}
+
+#countup {
+   font-weight: bold;
+}
+
+form {
+   width: 380px;
+}
+
+fieldset {
+   position: relative;
+   padding: 5px 30px 30px;
+   margin: 0 15px 25px;
+}
+
+legend {
+   font-size: 1.1em;
+   position: absolute;
+   padding: 10px 0;
+}
+
+input, label {
+   position: relative;
+   top: 50px;
+   line-height: 1.2em;
+   display: block;
+}
+input[type=radio], input.radio
+{
+	float: left;
+	clear: none;
+	margin: 5px 5 5 5px;
+}
+fieldset.text label {
+   width: 6em;
+   text-align: right;
+   float: left;
+   clear: left;
+   margin-right: 10px;
+   margin-top: 5px;
+}
+
+fieldset.text input {
+   margin-top: 5px;
+   margin-right: 5px;
+}
+
+#btn {
+   margin-left: 4em;
+}
+/*Ticket Look (I googled this)*/
+#shippingTicket:after {
+    content: "";
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    border-right: #0b132b 21px solid;
+    border-bottom: #0b132b 21px solid;
+    -moz-border-radius: 0 0 20px 0;
+    -webkit-border-radius: 0 0 20px 0;
+    border-radius: 0 0 20px 0;
+}
+.ticketH
+{
+	color: #b77722;
+}
+#shippingTicket:before {
+    content: "";
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    border-left: #0b132b 21px solid;
+    border-bottom: #0b132b 21px solid;
+    -moz-border-radius: 0 0 0 20px;
+    -webkit-border-radius: 0 0 0 20px;
+    border-radius: 0 0 0 20px;
+}
+.dashed 
+{
+	border: dashed;
+	color: #b77722;
+	padding: 5px;
+}
+.dashed:after 
+{
+    content: "";
+    position: absolute;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    border-right: #0b132b 21px solid;
+    border-top: #0b132b 21px solid;
+    -moz-border-radius: 0 20px 0 0;
+    -webkit-border-radius: 0 20px 0 0;
+    border-radius: 0 20px 0 0;
+}
+.dashed:before
+{
+    content: "";
+    position: absolute;
+    z-index: 1000;
+    bottom: 0;
+    right: 0;
+    border-left: #0b132b 21px solid;
+    border-top: #0b132b 21px solid;
+    -moz-border-radius: 20px 0 0 0;
+    -webkit-border-radius: 20px 0 0 0;
+    border-radius: 20px 0 0 0;
+}
+
+/* calendar */
+#cal {
+   display: none;
+   position: absolute;
+   left: 230px;
+   top: 65px;
+   background: #fafafa;
+   color: #0b132b;
+   padding: 10px;
+   -moz-border-radius-topleft: 10px;
+   -webkit-border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+   -moz-border-radius-topright: 10px;
+   -webkit-border-top-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#cal table {
+   clear: both;
+}
+
+#cal table caption {
+   font-weight: bold;
+   font-size: 14pt;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   background: #5bc0be;
+}
+
+#cal table th {
+   text-align: right;
+}
+
+#cal table th, #cal table td {
+   width: 2em;
+   padding: 4px;
+}
+
+#cal table td {
+   color: #424242;
+   text-align: right;
+   cursor: pointer;
+}
+
+#prev {
+   float: left;
+   padding: 4px;
+   cursor: pointer;
+}
+
+#next {
+   float: right;
+   padding: 4px;
+   cursor: pointer;
+}
+
+#cal table td.pastdate {
+   color: #424242;
+}
+
+#cal table td.pastdate:hover, #prev:hover, #next:hover, #close:hover {
+   background: #5bc0be;
+   color: #fafafa;
+} 
+
+#close {
+   color: #0b132b;
+   float: right;
+   padding: 0 4px;
+   cursor: pointer;
+}
+
+#close span {
+   font-size: 20pt;
+}
+
+/*End Chapter 7 CSS */

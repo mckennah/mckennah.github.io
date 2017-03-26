@@ -7,6 +7,9 @@ Medium Blue #3a506b;
 	Accent color/border color
 Dark Blue #0b132b
 	Main content background color/title color
+Orange color #f9bd6d
+	Shipping ticket
+	
 */
 
 
@@ -19,7 +22,7 @@ body
 }
 p 
 {
-	font-size: 0.8em;
+	font-size: 1em;
 	text-align: center;
 }
 h2
