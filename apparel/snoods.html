@@ -56,6 +56,7 @@
 				<img src="../images/snood.jpg" alt="snood on greyhound" width="300">
 				<p>Snoods are dog scarves that fit snugly around their neck, ears, and face. 
 					It is important to get the correct size snood so that it is not too loose or too tight. </p>
+				<p class="larger">Chapter 8 Alert: You must press enter at the bottom to convert colors to string! </p>
 					<br><br>
 					
 					
@@ -67,18 +68,7 @@
 										<input type="number" placeholder="inches" name="inches" id="inches" min="0" max="50">
 								<br>
 								</fieldset>
-								<!-- to be fixed later
-								<fieldset>
-									<legend><b>What is your winter climate?</b></legend> 
-									<br>
-										&ensp; <input type="radio" name="climate" id="mild" value="mild">
-											<label for="mild">Mild</label><br>
-										&ensp; <input type="radio" name="climate" id="wet" value="wet">
-											<label for="wet">Wet and Rainy</label><br>
-										&ensp; <input type="radio" name="climate" id="cold" value="cold">
-											<label for="cold">Cold and Snowy</label><br
-								<br>
-								</fieldset> -->
+								
 								<fieldset>
 									<legend><b>Is your dog a greyhound or another similar breed?</b></legend>
 									<br>
@@ -88,7 +78,32 @@
 											<label for="non-greyhound">Non-Greyhound</label>
 								<br>
 								</fieldset>
-								<!-- might do a button later <button type="button" id="button">Enter</button> -->
+								
+								<fieldset>
+									<legend><b>What colors would you like?</b></legend> 
+										<input type="checkbox" name="colors" id="orange" value="Orange">
+											<label for="orange" id="orangeLabel">Obedient Orange</label>
+										<input type="checkbox" name="colors" id="red" value="Red">
+											<label for="red" id="redLabel">Rebellious Red</label>
+										<input type="checkbox" name="colors" id="yellow" value="Yellow">
+											<label for="yellow" id="yellowLabel">Youthful Yellow</label>
+										<input type="checkbox" name="colors" id="green" value="Green">
+											<label for="green" id="greenLabel">Galactic Green</label>
+										<input type="checkbox" name="colors" id="blue" value="Blue">
+											<label for="blue" id="blueLabel">Bubbly Blue</label>
+										<input type="checkbox" name="colors" id="pink" value="Pink">
+											<label for="pink" id="pinkLabel">Pleasant Pink</label>
+										<input type="checkbox" name="colors" id="purple" value="Purple">
+											<label for="purple" id="purpleLabel">Perky Purple</label>
+										<input type="checkbox" name="colors" id="white" value="White">
+											<label for="white" id="whiteLabel">Whispered White</label>
+										<input type="checkbox" name="colors" id="brown" value="Brown">
+											<label for="brown" id="brownLabel">Bronzed Brown</label>
+										<input type="checkbox" name="colors" id="black" value="Black">
+											<label for="black" id="blackLabel">Bionic Black</label><br>
+								</fieldset> 
+								
+							<button type="button" id="btn">Enter</button>
 							</form>
 							
 							<br>
@@ -97,12 +112,14 @@
 						
 						
 						
-						
-						<div class="snoodChoice">
+						<!-- to fix: getting everything to line up neatly-->
+						<div id="snoodChoice" class="snoodChoice">
 							<h3>We recommend...</h3>
 								<p id="recommendSize" class="larger"> </p>
 								<p id="message"> </p>
 								<p id="message2"> </p>
+								<p id="recommendColors" class="larger"> In your chosen color(s) of: </p>
+								<ul id="message3"> </ul>
 						</div>
 		</div>
 

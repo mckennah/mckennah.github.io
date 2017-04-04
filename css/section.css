@@ -33,8 +33,13 @@ fieldset
 .larger
 {
 	font-size: 1.4em;
+	color: #5bc0be;
 }
-
+/*Chapter 8 CSS */
+#snoodChoice, #recommendSize, #message, #message2, #message3, #recommendColors
+{
+	display: none;
+}
 /*Chapter 7 CSS */
 #shippingTicket {
    float: right;

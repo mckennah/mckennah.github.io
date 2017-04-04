@@ -74,6 +74,12 @@ a.WS:hover
 	color: #5bc0be;
 	text-decoration: underline;
 }
+input[type="checkbox"] {
+    display: inline-block;
+    width: 15px;
+    vertical-align: top;
+}
+
 
 
 
@@ -105,7 +111,10 @@ a.WS:hover
 	padding: 10px;
 	overflow: auto;
 }
-
+#button
+{
+	float: right;
+}
 
 
 /*Classes*/

@@ -1,16 +1,17 @@
 // global variables
 var inchesComplete = true;
 var greyYNComplete = true;
-//var climateComplete = true;
+
 var i = [1];
 
 var recommendSizeElement = document.getElementById("recommendSize"); //size recommendation
 var messageElement = document.getElementById("message"); //message of size recomendation
 var message2Element = document.getElementById("message2"); //message of head hole recomendation
-
 var inchesFieldset = document.getElementsByTagName("fieldset")[0];
 var greyYNFieldset = document.getElementsByTagName("fieldset")[1];
-//var climateFieldset = document.getElementsByTagName("fieldset")[2];
+
+var color = []; 
+var arrayString;
 
 var inchesBox = document.forms[0].inches; //inches input box
 
@@ -37,6 +38,7 @@ function verifyInches() {
 					recommendSizeElement.innerHTML = ""; //remove any former recommendation heading
 					testFormCompleteness();
 				}
+
 			}
 
 /*
@@ -81,42 +83,59 @@ function createRecommendation() {
 			} else if (inchesBox.value <=40) {
 						recommendSizeElement.innerHTML = "Extra-Large";
 						messageElement.innerHTML = "A snood in size extra-large.";
-			} 
-/*to be fixed
-// add fabric type based on climate
-		if (document.getElementById("mild").checked) { 
-						messageElement.innerHTML += ", in a loose-knit fabric, perfect for general use.";
-			} else if (document.getElementById("wet").checked) {
-						messageElement.innerHTML += ", in a waterproof fabric, perfect for regions with wet winters.";
-			} else if (document.getElementById("cold").checked) {
-						messageElement.innerHTML += ". We would recommend a double layer with a tight-knit snood underneath a waterproof snood to keep your pooch warm and dry.";
-			} else {
-				messageElement.innerHTML += ".";
-   }	
-*/		
-		
-//add recomendation based on breed
+			} 		
+			document.getElementById("snoodChoice").style.display = "block";
+			document.getElementById("recommendSize").style.display = "block";
+			document.getElementById("message").style.display = "block";	
+//add recommendation based on breed
    	if (document.getElementById("greyhound").checked) {
 			message2Element.innerHTML = "Our standard snood is built for Greyhounds, Salukis, Whippets, and Italian Greyhounds.";
 	} else if (document.getElementById("non-greyhound").checked) {
 				message2Element.innerHTML = "Our 'Jumbo Noggin' snood option will fit your non-greyhound pooch.";
 	}
+	document.getElementById("message2").style.display = "block";
+}
+
+//add color(s) to recommendation
+function addSelectedColors(event) {
+   if (event === undefined) { //iE8
+      event = window.event;
+   }
+	var callerElement = event.target || event.srcElement;
+	var colorName = callerElement.value;
+	if (callerElement.checked) { //if checked, add to array
+	
+		color.push(colorName);
+
+      //add selected colors to recommendation side
+      var newColor = document.createElement("li");
+      newColor.innerHTML = colorName;
+      document.getElementById("message3").appendChild(newColor);
+      //make recommenadation side visible
+      document.getElementById("snoodChoice").style.display = "block";
+	  document.getElementById("recommendColors").style.display = "block";
+	  document.getElementById("message3").style.display = "block";
+	} else { //if color is deselected
+		var listItems = document.querySelectorAll("#message3 li");
+		for (var i = 0; i < listItems.length; i++) {
+			if (listItems[i].innerHTML === colorName) {
+	
+				color.splice(i, 1); //remove element at index i from array
+
+            listItems[i].parentNode.removeChild(listItems[i]);
+            break;
+         }
+      }
+   }
+}
+
+//convert form input to strings for submission
+function convertToString() {
+	//convert color array to string
+	arrayString = color.toString();
 }
 
 
-
-
-/*might do a button later
-
-var btn = document.getElementById("button");
-	if (btn.addEventListener) { //to make it work when button is clicked
-	btn.addEventListener("click", testFormCompleteness, false);
-	}
-	else if (btn.attachEvent) { //for users of old versions of IE
-	btn.attachEvent("onclick", testFormCompleteness)
-	}
-
-*/
 
 
 //create event listeners for all input elements 
@@ -137,21 +156,26 @@ function createEventListeners() {
       } else if (greyYNBox.attachEvent)  {
         greyYNBox.attachEvent("onchange", verifyGreyYN);
       }
-   }
-}
-  /*
-   var climateBox;
-   for (var i = 0; i < 5; i++) {
-      climateBox = climateFieldset.getElementsByTagName("input")[i];
-      climateBox.checked = false;      
-      if (climateBox.addEventListener) {
-        climateBox.addEventListener("change", verifyClimate, false); 
-      } else if (climateBox.attachEvent)  {
-        climateBox.attachEvent("onchange", verifyClimate);
+  }
+  
+  var colors = document.getElementsByName("colors");
+   if (colors[0].addEventListener) {
+      for (var i = 0; i < colors.length; i++) {
+         colors[i].addEventListener("change", addSelectedColors, false);
+      }
+   } else if (colors[0].attachEvent) {
+      for (var i = 0; i < colors.length; i++) {
+         colors[i].attachEvent("onchange", addSelectedColors);
       }
    }
+   var button = document.getElementById("btn");
+   if (button.addEventListener) {
+	   button.addEventListener("click", convertToString, false);
+   } else if (button.attachEvent) {
+	   button.attachEvent("onclick", convertToString);
+   }
 }
-*/
+
 
 
 
