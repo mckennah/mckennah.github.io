@@ -2,7 +2,6 @@
 
 //global vairables
 var formValidity = true;
-var errorDiv = "";
 
 //remove default select value
 function removeSelectDefaults(){
@@ -14,7 +13,7 @@ function removeSelectDefaults(){
 
 //validate message
 function validateMessage() {
-	//var errorDiv = document.querySelector("#contactinfo");
+	var errorDiv = document.getElementById("errorMsg");
 	var msgBox = document.getElementById("messageText");
 		try {
 			if ((msgBox.value === "") || (msgBox.value === msgBox.placeholder)) {
@@ -27,7 +26,7 @@ function validateMessage() {
 		catch (msg) {
 			errorDiv.style.display = "block";
 			errorDiv.innerHTML = msg;
-			msgBox.style.background = "rgb(255,233,233)";
+			msgBox.style.background = "rgb(255,165,165)";
 			formValidity = false;
 		}
 }
@@ -36,7 +35,7 @@ function validateMessage() {
 //validate required fields
 function validateRequired() {
 	var inputElements = document.querySelectorAll("#contactinfo input");
-	var errorDiv = document.getElementById("errorText");
+	var errorDiv = document.getElementById("errorMsg");
 	var elementCount = inputElements.length;
 	var requiredValidity = true;
 	var currentElement;
@@ -46,7 +45,7 @@ function validateRequired() {
 			//validate all input elements in fieldset
 			currentElement = inputElements[i];
 				if (currentElement.value === "") {
-					currentElement.style.background = "rgb(255,233,233)";
+					currentElement.style.background = "rgb(255,165,165)";
 					requiredValidity = false;
 				} else {
 					currentElement.style.background = "white";
@@ -80,6 +79,101 @@ function validateForm(evt) {
 	validateMessage();
 }
 
+//validate first name against XSS
+function validateFName() {
+	var nameInput = document.getElementById("firstname");
+	var errorDiv = document.getElementById("errorMsg");
+	var fNameCheck = /^[A-Za-z ]{1,16}$/; //letters and spaces
+	try {
+		if (fNameCheck.test(nameInput.value) === false) {
+			throw "Please provide a valid first name";
+		}
+		nameInput.style.background = "";
+		errorDiv.innerHTML = "";
+        errorDiv.style.display = "none";
+	}
+	catch(msg) {
+		//display error message
+      errorDiv.innerHTML = msg;
+      errorDiv.style.display = "block";
+      //change input style
+      nameInput.style.background = "rgb(255,165,165)";
+	}
+}
+
+//validate last name against XSS
+function validateLName() {
+	var nameInput = document.getElementById("lastname");
+	var errorDiv = document.getElementById("errorMsg");
+	var lNameCheck = /^[A-Za-z ]{1,20}$/; //letters and spaces
+	try {
+		if (lNameCheck.test(nameInput.value) === false) {
+			throw "Please provide a valid last name";
+		}
+		nameInput.style.background = "";
+		errorDiv.innerHTML = "";
+        errorDiv.style.display = "none";
+	}
+	catch(msg) {
+		//display error message
+      errorDiv.innerHTML = msg;
+      errorDiv.style.display = "block";
+      //change input style
+      nameInput.style.background = "rgb(255,165,165)";
+	}
+}
+
+//validate entered email for proper @ 
+function validateEmail() {
+   var emailInput = document.getElementById("email");
+   var errorDiv = document.getElementById("errorMsg");
+   var emailCheck = /^[_\w\-]+(\.[\w\-]+)*@[\w\-]+(\.[\w\-]+)*(\.[\D]{2,6})$/;
+   try {
+	if (emailCheck.test(emailInput.value) === false) {
+		throw "Please provide a valid email address";
+	}
+
+      //remove any email error styling and message
+      emailInput.style.background = "";
+      errorDiv.innerHTML = "";
+      errorDiv.style.display = "none";
+      //convert email address to lowercase
+	emailInput.value = emailInput.value.toLowerCase();
+
+   }
+   catch(msg) {
+      //display error message
+      errorDiv.innerHTML = msg;
+      errorDiv.style.display = "block";
+      //change input style
+      emailInput.style.background = "rgb(255,165,165)";
+   }
+}
+
+//validate message box against XSS
+function validateMBox() {
+	var textInput = document.getElementById("messageText");
+	var errorDiv = document.getElementById("errorMsg");
+	var mBoxCheck = /^[A-Za-z0-9!@#$%^&*()_ ]{1,250}$/; 
+	try {
+		if (mBoxCheck.test(textInput.value) === false) {
+			throw "Please enter proper message."; 
+		}
+		textInput.style.background = "";
+		errorDiv.innerHTML = "";
+        errorDiv.style.display = "none";
+	}
+	catch(msg) {
+		//display error message
+      errorDiv.innerHTML = msg;
+      errorDiv.style.display = "block";
+      //change input style
+      textInput.style.background = "rgb(255,165,165)";
+	}
+}
+
+
+
 
 
 //create event listeners
@@ -90,6 +184,30 @@ function createEventListenersSubmit() {
 		} else if (form.attachEvent) {
 			form.attachEvent("onsubmit", validateForm);
 		}
+	var emailInput = document.getElementById("email");
+	if (emailInput.addEventListener) {
+      emailInput.addEventListener("change", validateEmail, false); 
+   } else if (emailInput.attachEvent) {
+      emailInput.attachEvent("onchange", validateEmail);
+   }
+   var FNameInput = document.getElementById("firstname");
+	if (FNameInput.addEventListener) {
+      FNameInput.addEventListener("change", validateFName, false); 
+   } else if (FNameInput.attachEvent) {
+      FNameInput.attachEvent("onchange", validateFName);
+   }
+   var LNameInput = document.getElementById("lastname");
+	if (LNameInput.addEventListener) {
+      LNameInput.addEventListener("change", validateLName, false); 
+   } else if (LNameInput.attachEvent) {
+      LNameInput.attachEvent("onchange", validateLName);
+   }
+   var mBoxInput = document.getElementById("messageText");
+	if (mBoxInput.addEventListener) {
+      mBoxInput.addEventListener("change", validateMBox, false); 
+   } else if (mBoxInput.attachEvent) {
+      mBoxInput.attachEvent("onchange", validateMBox);
+   }
 }
 
 function setUpPage () {

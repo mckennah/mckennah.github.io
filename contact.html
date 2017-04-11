@@ -60,12 +60,12 @@
 	<br>
 	<fieldset class="nostyle" id="contactinfo">
 			Name: &nbsp; 
-				<input type="text" id="firstname" placeholder="First Name"> 
+				<input type="text" maxlength="15" id="firstname" placeholder="First Name"> 
 					&nbsp; 
-				<input type="text" id="lastname" placeholder="Last Name"> 
+				<input type="text" maxlength="20"  id="lastname" placeholder="Last Name"> 
 		<br><br>
 			Email address: &nbsp;
-				<input type="text" id="email" placeholder="email@example.com"/> 
+				<input type="text" maxlength="30" id="email" placeholder="email@example.com"/>
 		<br><br>
 			Reason for contact: &nbsp;
 				<select name="rContact" id="rContact" form="contactUs" required="required">
@@ -77,7 +77,7 @@
 				<textarea rows="4" cols="64" id="messageText" required="required" placeholder="Message..."></textarea>
 			
 				<br><br>
-				<div class="errorMessage"></div>
+				<div id="errorMsg" class="errorMessage"></div>
 	</fieldset>
 	<fieldset class="nostyle" id="submitsection">
           <input type="submit" id="submitBtn" value="Submit" />
