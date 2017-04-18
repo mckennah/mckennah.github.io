@@ -38,7 +38,7 @@ function createDirections(position) {
 	document.getElementById("map-values").innerHTML = "<p>Your latitude is: " + currPosLat + ".</p>";
 	document.getElementById("map-values").innerHTML += "<p>Your longitude is: " + currPosLng + ".</p>";
 	document.getElementById("map-values").innerHTML += "<p>Your altitude is: " + currPosAlt + ".</p>";
-	document.getElementById("map-values").innerHTML += "<p><i>Altitude is usually only available on devices with GPS enabled, such as a smart-phone.</i></p>"; 
+	document.getElementById("map-values").innerHTML += "<p><i>Altitude is usually only available on devices with GPS enabled.</i></p>"; 
 		//I think Bing maps can show altitude
 		//for future use if altitude is needed: https://msdn.microsoft.com/en-us/library/jj158959.aspx
 		//need more exp with using different APIs though Gooogle is most popular
