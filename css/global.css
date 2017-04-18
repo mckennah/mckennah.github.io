@@ -116,6 +116,15 @@ input[type="checkbox"] {
 	float: right;
 }
 
+#location {
+   min-height: 500px;
+   padding: 0 20px;
+}
+
+#map {
+   width: 100%;
+   min-height: 300px;
+}
 
 /*Classes*/
 .about-section-left

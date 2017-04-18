@@ -206,7 +206,9 @@
 <p>In the box below you will be able to see some values that I can see about you as a user; without you doing anything other than viewing this page.</p>
 <div id ="safety" class="left"> </div>
 
-
+<div id="location">
+<div id="map"></div>
+</div>
 
 
 
@@ -220,6 +222,9 @@ message += "<p>The available height of your window:  " + screen.availHeight + "<
 message += "<p>The actual height of your window:  " + screen.height + "</p>";
 message += "<p>The available width of your window:  " + screen.availWidth + "</p>";
 message += "<p>The actual width of your window:  " + screen.width + "</p>";
+message += "<p>Your current latitude: " + position.coords.latitude + "</p>";
+message += "<p>Your current longitude: " + position.coords.longitude + "</p>";
+message += "<p>Your current altitude: " + position.coords.altitude + "</p>";
 
 document.getElementById("safety").innerHTML = message;
 </script>
@@ -233,5 +238,7 @@ document.getElementById("safety").innerHTML = message;
 <br><br><br>
 </div>
 <script type="text/javascript" src="shipping.js"></script>
+<script type="text/javascript" src="map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
 </body>
 </html>
