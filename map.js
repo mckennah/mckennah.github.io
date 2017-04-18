@@ -25,14 +25,23 @@ function createDirections(position) {
 	clearTimeout(waitForUser);
 	console.log("Longitude: " + position.coords.longitude);
 	console.log("Latitude: " + position.coords.latitude);
-
+	var currPosAlt = position.coords.altitude;
 	var currPosLat = position.coords.latitude;
 	var currPosLng = position.coords.longitude;
 	var mapOptions = { 
 		center: new google.maps.LatLng(currPosLat, currPosLng),
-		zoom: 14
+		zoom: 14 //using 19 gets extremely close, like zoomed in on my exact apartment building close. 14 is close but not too close
 		};
 	var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+	
+	
+	document.getElementById("map-values").innerHTML = "<p>Your latitude is: " + currPosLat + ".</p>";
+	document.getElementById("map-values").innerHTML += "<p>Your longitude is: " + currPosLng + ".</p>";
+	document.getElementById("map-values").innerHTML += "<p>Your altitude is: " + currPosAlt + ".</p>";
+	document.getElementById("map-values").innerHTML += "<p><i>Altitude is usually only available on devices with GPS enabled, such as a smart-phone.</i></p>"; 
+		//I think Bing maps can show altitude
+		//for future use if altitude is needed: https://msdn.microsoft.com/en-us/library/jj158959.aspx
+		//need more exp with using different APIs though Gooogle is most popular
 }
 
 function fail() {

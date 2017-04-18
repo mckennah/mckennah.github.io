@@ -208,6 +208,7 @@
 
 <div id="location">
 <div id="map"></div>
+<div id="map-values"></div>
 </div>
 
 
@@ -222,9 +223,6 @@ message += "<p>The available height of your window:  " + screen.availHeight + "<
 message += "<p>The actual height of your window:  " + screen.height + "</p>";
 message += "<p>The available width of your window:  " + screen.availWidth + "</p>";
 message += "<p>The actual width of your window:  " + screen.width + "</p>";
-message += "<p>Your current latitude: " + position.coords.latitude + "</p>";
-message += "<p>Your current longitude: " + position.coords.longitude + "</p>";
-message += "<p>Your current altitude: " + position.coords.altitude + "</p>";
 
 document.getElementById("safety").innerHTML = message;
 </script>

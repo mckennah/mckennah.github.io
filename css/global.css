@@ -124,6 +124,14 @@ input[type="checkbox"] {
 #map {
    width: 100%;
    min-height: 300px;
+   width: 550px;
+   position: relative;
+   margin: 20px auto;
+   padding: 10px;
+   overflow: auto;
+   border-color: #5bc0be;
+   border-width: 3px;
+   border-radius: 3px;
 }
 
 /*Classes*/
