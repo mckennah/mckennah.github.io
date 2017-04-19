@@ -6,9 +6,7 @@
 var waitForUser;
 
 
-//function loadDirections() {
-//	geoTest();
-//}
+
 
 function geoTest() {
 	waitForUser = setTimeout(fail, 10000);
@@ -30,7 +28,7 @@ function createDirections(position) {
 	var currPosLng = position.coords.longitude;
 	var mapOptions = { 
 		center: new google.maps.LatLng(currPosLat, currPosLng),
-		zoom: 14 //using 19 gets extremely close, like zoomed in on my exact apartment building close. 14 is close but not too close
+		zoom: 16 //using 19 gets extremely close, like zoomed in on my exact apartment building close.
 		};
 	var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 	
@@ -53,12 +51,9 @@ function fail() {
 
 function setUpPage() {
 	geoTest();
-	createEventListeners();
 }
 
-function createEventListeners() {
-	
-}
+
 
 
 //runs setup of functions when page finishes loading
