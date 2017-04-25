@@ -17,11 +17,14 @@
 <link rel="stylesheet" href="../css/global.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="../css/nav.css" type="text/css" media="screen"/>
 <link rel="stylesheet" href="../css/fonts.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="../css/spotify.css" type="text/css" media="screen"/>
 <style>
 @import url('https://fonts.googleapis.com/css?family=Quicksand|Ubuntu|Ubuntu+Condensed');
 @import url('https://fonts.googleapis.com/css?family=Sacramento');
 </style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script type="text/javascript" src="../modernizr.custom.05819.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
 
 </head>
 <body>
@@ -54,14 +57,33 @@
 
 <div class="section">
 <h2>Our Story</h2>
-<p>PGA started as a case project for a javascript class. I have
-absolutely no talent in sewing. She does own a greyhound and shops for her collars and other
-clothing items on Etsy. None of the items shown have been created by <i>Paramount Greyhound Apparel</i>.</p>
+<p>None of the items shown have been created by <i>Paramount Greyhound Apparel</i>.</p>
 <p>I have mostly bought from BullenBeisserDog and I highly recommend them.</p>
+</div>
 
 
+<div class="section">
+<h2>Spotify API</h2>
+<p>Type in an artist's name and their albums that are available on Spotify will appear.<br>
+Searches for artists without albulms on Spotify (cough, Taylor Swift) will bring up albums related to that search term.<br>
+Click on an album an a short audio clip will play. 
+Spelling does need to be correct.<br> 
+Also, not every albulm has an audio clip, (thanks Spotify) so try a couple!</p>
+	<div class="pls-center">
+	<form id="spotifyForm">
+			 <input type="text" id="query" value="" />
+			 <input type="submit" id="search" class="btn btn-primary" value="Fetch!" />
+	</form>
+	</div>
+		<div id="results"></div>
 
-
+<div class="pls-center">
+<script id="displayAlbums" src="../spotify.js">
+    {{#each albums.items}}
+    <div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
+    {{/each}}
+</script>
+</div>
 </div>
 </div>
 </div>
