@@ -138,30 +138,40 @@ an area that you will put into your HTML code. You can type it out like this:
 			<div class="mini-section">
 			<h3>Putting It All Together</h3>
 			<p>We have our javascript and our HTML ready. Make sure to call your function on page load. Also make sure to
-			call your script using the script tags just before your closing body tag. Here is what you should have:</p>
+			call your script using the script tags just before your closing body tag. Here is similar to what you should have:</p>
 			<p>HTML</p>
 <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;title&gt;Countdown Timer&lt;/title&gt;
-&lt;meta charset="utf-8" /&gt;
+&lt;head&gt;  
+
+&lt;title&gt;JavaScript Tutorial&lt;/title&gt;  
+&lt;meta charset="utf-8" /&gt;  
 &lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;
-&lt;meta name="dcterms.rightsHolder" content="" /&gt;
-&lt;meta name="dcterms.dateCopyrighted" content="2017" /&gt;
+&lt;meta name="dcterms.rightsHolder" content="McKennah Schroeder" /&gt;
+&lt;meta name="dcterms.dateCopyrighted" content="2017" /&gt;  
 &lt;meta name="description" content="" /&gt;
-&lt;meta name="keywords" content=""/&gt;
+&lt;meta name="keywords" content=""/&gt;  
 &lt;link rel="stylesheet" href="global.css" type="text/css" media="screen" /&gt;
+&lt;link rel="stylesheet" href="styles/default.css"&gt;
 &lt;script type="text/javascript" src="modernizr.custom.05819.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 &lt;h1&gt;Countdown Timer Page&lt;/h1&gt;
-&lt;div&gt;
+&lt;div id="outer"&gt;
+&lt;div id="container"&gt;
+&lt;main&gt;
 &lt;h2&gt;Countdown to Winter Solstice&lt;/h2&gt;
-&lt;p id="countdownText"&gt;&lt;/p&gt;
+&lt;div class="section"&gt;
+&lt;p id="countdownText"&gt;  &lt;/p&gt;
+&lt;p id="today"&gt; &lt;/p&gt;
+&lt;p id="winter"&gt; &lt;/p&gt;
+&lt;/div&gt;
+&lt;/main&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;script src="timer.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;</code></pre> 
 <p>JavaScript</p>
 <pre><code>function countdownTimer() {
 var dateToday = new Date();
