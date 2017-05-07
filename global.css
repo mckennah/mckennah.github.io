@@ -99,6 +99,10 @@ table, th, td
 	position: relative;
 	overflow: auto;
 }
+#countdownText
+{
+	text-align: center;
+}
 
 /*Classes*/
 .section
