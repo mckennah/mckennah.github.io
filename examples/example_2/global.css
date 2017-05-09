@@ -1,0 +1,125 @@
+h1
+{
+	font-size: 3em;
+	font-family: 'Shadows Into Light', cursive;
+	text-align: center;
+	color: #50808e
+}
+body 
+{
+    background-color: #ddd8e4;
+	margin: 0;
+	font-family: 'Noto Sans', sans-serif;
+}
+p 
+{
+	font-size: 1em;
+	text-align: left;
+	color: #ddd8e4;
+}
+h2
+{
+	text-align: center;
+	color: #a3c9a8;
+	font-size: 1.8em;
+	
+}
+h3
+{
+	color: #50808e;
+	text-align: center;
+	font-size: 1.3em;
+	text-shadow: #ddd8e4 0 0 0.2em, #ddd8e4 0 0 0.2em;
+}
+a:visited, a:link
+{
+	text-decoration: none;
+}
+ul
+{
+	list-style-type: none;
+}
+h1 > a:link
+{
+	color: #50808e;
+	text-decoration: none;
+}
+h1 > a:visited
+{
+	color: #50808e;
+	text-decoration: none;
+}
+table
+{
+	border-collapse: collapse;
+	padding: 10px;
+	text-align: left;
+	width: 100%;
+}
+th
+{
+	background-color: #50808e;
+	color: #ddd8e4;
+	font-size: 1.5em;
+	padding: 5px;
+	width: 50%;
+	font-family: 'Shadows Into Light', cursive;
+}
+tr:nth-child(even)
+{
+	background-color: #84b59f;
+	
+}
+td
+{
+	color: #ddd8e4;
+	
+}
+table, th, td
+{
+	border-color: #fafafa;
+	border-width: 1px;
+}
+
+
+/*IDs*/
+#outer
+{
+	background-color: #ddd8e4;
+	width: 100%;
+}
+#container
+{
+    background-color: #69a297;
+	color: #84b59f;
+	padding: 5px;
+	width: 85%;
+	margin: 0 auto;
+	border-radius: 4px;
+	position: relative;
+	overflow: auto;
+}
+#countdownText
+{
+	text-align: center;
+}
+
+/*Classes*/
+.section
+{
+	border-style: double;
+	border-color: #a3c9a8;
+	border-width: 2px;
+	border-radius: 4px;
+	width: 95%;
+	position: relative;
+	margin: 20px auto;
+	padding: 10px;
+	overflow: auto;
+}
+
+.clearfix 
+{
+	zoom: 1;
+	overflow: auto;
+}

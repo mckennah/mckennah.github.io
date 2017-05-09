@@ -29,9 +29,15 @@ document.getElementById("countdownText").innerHTML += secondsUntil + " second(s)
 
 }
 
+function countdownInterval() {
+	var countdown;
+	countdown = setInterval(countdownTimer, 1000);
+}
+
 //runs funtions after page loads
 function setUpPage() {
 	countdownTimer();
+	countdownInterval();
 }
 
 //runs setup of functions when page finishes loading
